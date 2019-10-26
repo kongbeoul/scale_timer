@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+.btnWrap {text-align:center;}
+.btnWrap .btn {min-width:160px;height:40px;padding:0 10px;border-radius:20px;text-align:center;font-size:15px;color:#fff;background:#2fb7af}
+
+[class^="mypage"] .infoArea {text-align:center;}
+[class^="mypage"] .infoArea .bigTitle:before {content:'';display:block;margin:0 auto 15px;width:39px;height:39px;background-position:50% 50%;background-repeat:no-repeat;background-size:100% auto;background-image:url('../images/mypage/icon_diary.png');}
+[class^="mypage"] .infoArea .iconPlay:before {background-image:url('../images/mypage/icon_play.png');}
+[class^="mypage"] .infoArea .iconNodata:before {width:39.5px;height:35.5px;background-image:url('../images/mypage/icon_nodata.png');}
+[class^="mypage"] .infoArea .bigTitle {font-size:18px;line-height:1.3;color:#333}
+[class^="mypage"] .infoArea .bigTitle span {color:#2fb7af}
+[class^="mypage"] .infoArea .subTxt {margin-top:10px;font-size:12px;color:#767676}
+[class^="mypage"] .btnWrap {margin:25px auto 35px;}
+
+.mypageDiaryWrap .communityListArea {margin-top:4px;}
+.mypageDiaryWrap .communityListArea li .titleArea .infoTxtArea {margin:0}
+.mypageDiaryWrap .communityListArea li .hashTagArea {margin-bottom:0}
+.mypageDiaryWrap .communityListArea li + li {margin-top:18px;}
+
+.mypageNodataWrap {display:table;width:100%; height: calc(100vh - 221px);}
+.mypageNodataWrap .infoArea {display:table-cell;vertical-align:middle;}
+.mypageNodataWrap .infoArea .btnWrap {margin-bottom:0}
+
+.mypageDiaryDetailWrap .titleArea {overflow:hidden; margin-bottom:15px;}
+.mypageDiaryDetailWrap .date {font-weight:300; color:#959595;}
+.mypageDiaryDetailWrap .titleTxt {font-size:15px; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+.mypageDiaryDetailWrap .detailsTxt {font-weight:300; margin-bottom:15px;}
+.mypageDiaryDetailWrap .thumArea {display:block; border-radius:4px; overflow:hidden; margin-bottom:15px;}
+.mypageDiaryDetailWrap .thumArea img {max-width:100%;}
+
+.mypageAddWrap {margin-top:0}
+.addWrap .btnWrap {position:fixed;bottom:0;left:0;right:0;padding:20px 18px;margin:0 auto;background:#fff}
+.addWrap .btnWrap .btn {width:100%}
+
+.mypageInfoWrap {margin-top:84px;padding:0 15px 10px; box-sizing:border-box; border-radius:4px; box-shadow:0px 0px 4px rgba(0,0,0,0.1);}
+.mypageInfoWrap:before {content:'';display:block;width:100%;height:4px;}
+.mypageInfoWrap .myProfileArea {margin-top:-64px;}
+.mypageInfoWrap .myInfoBox {text-align:center;padding-bottom:20px}
+.mypageInfoWrap .myInfoBox .imgBox {position:relative;margin:0 auto;width:95px;height:95px;}
+.mypageInfoWrap .myInfoBox .imgBox img {max-width:100%;height:100%;object-fit:cover;border-radius:50%;overflow:hidden;}
+.mypageInfoWrap .myInfoBox .imgBox .btnSet {font-size:0;position:absolute;right:0;bottom:0;z-index:1;width:30px;height:30px;background:url('../images/mypage/btn_set.png') center no-repeat;background-size:30px}
+.mypageInfoWrap .myInfoBox .name {overflow:hidden; height:18px; margin-top:15px;font-size:15px;color:#333;font-weight:500; line-height:18px;}
+.mypageInfoWrap .myInfoBox .name .gradeTxt {display:inline-block; height:18px; line-height:18x; padding:0 5px; font-size:10px; background:#ffae2f; color:#fff; border-radius:10px; vertical-align:top;}
+.mypageInfoWrap .myInfoBox .infoTxt {margin-top:5px;font-size:11px;color:#767676;}
+.mypageInfoWrap .myInfoBox .infoTxt span + span:before {content:'';display:inline-block;margin:0 5px;vertical-align:-1px;width:1px;height:10px;background:#ccc}
+.mypageInfoWrap .myListArea {border-top:1px solid #eaeaea;padding-top:15px;box-sizing:border-box;}
+.mypageInfoWrap .myListArea .infoBox {display:table;width:100%; margin-bottom:15px}
+.mypageInfoWrap .myListArea .infoBox li {display:table-cell;vertical-align:middle;width:50%;text-align:center; padding:10px 0;}
+.mypageInfoWrap .myListArea .infoBox .titleTxt:before {content:'';display:block;margin:0 auto 7px;width:20px;height:20px;background-position:50% 50%;background-repeat:no-repeat;}
+.mypageInfoWrap .myListArea .infoBox .icon01 .titleTxt:before {background-image:url('../images/mypage/icon_profile01.png');background-size:20px auto;}
+.mypageInfoWrap .myListArea .infoBox .icon02 .titleTxt:before {background-image:url('../images/mypage/icon_profile02.png');background-size:20px auto;}
+.mypageInfoWrap .myListArea .infoBox .icon03 .titleTxt:before {background-image:url('../images/mypage/icon_profile03.png');background-size:20px auto;}
+.mypageInfoWrap .myListArea .infoBox .icon04 .titleTxt:before {background-image:url('../images/mypage/icon_profile04.png');background-size:20px auto;}
+.mypageInfoWrap .myListArea .infoBox .icon05 .titleTxt:before {background-image:url('../images/mypage/icon_profile05.png');background-size:20px auto;}
+.mypageInfoWrap .myListArea .infoBox .titleTxt {font-weight:bold;font-size:20px;color:#2fb7af;line-height:1}
+.mypageInfoWrap .myListArea .infoBox .titleTxt span {margin-top:5px;display:block;font-weight:normal;font-size:12px;color:#5a5a5a}
+
+.communityMainWrap > [class$="ListArea"] li .titleArea .infoTxtArea {margin:0 auto}
+.communityMainWrap .communityListArea li .hashTagArea {margin-bottom:0}
+.communityMainWrap > [class$="ListArea"] li + li {margin-top:18px;}
+.communityMainWrap .btnWrap {margin:25px auto;}
+.communityMainWrap .btnWrap .btn {width:100%; font-weight:normal; background:#fff; border:1px solid #eaeaea; color:#5a5a5a;}
+
+/* 나의 건강 보기*/
+.myHealthWrap {overflow:hidden;}
+.myHealthWrap .myHealthCont {padding:0 18px 25px; border-bottom:10px solid #f7f7f7; margin-bottom:25px;}
+.myHealthWrap .myHealthCont:last-child {margin-bottom:0; border-bottom:0;}
+.myHealthWrap .myHealthCont h2 {font-size:15px; margin-bottom:10px;}
+.myHealthWrap .myHealthCont ul {margin-bottom:20px;}
+.myHealthWrap .myHealthCont ul li {font-size:14px; margin-bottom:10px;}
+.myHealthWrap .myHealthCont ul li .maincolor {padding-right:40px; color:#333;}
+.myHealthWrap .myHealthCont .btnMind {width:100%; height:40px; line-height:40px; color:#fff; background:#2fb7af; text-align:center; border-radius:20px; font-size:15px;}
+.myHealthWrap .myHealthCont p {margin-bottom:20px;}
+.myHealthWrap .myHealthCont p .maincolor {font-weight:600;}
+.myHealthWrap .myHealthCont .graphTitle {display:block; font-size:14px;}
+.myHealthWrap .myHealthCont .graphArea {margin-bottom:30px;}
+
+/* 힐링푸드 레시피 */
+.recipeViewWrap .titleArea {padding:0 18px 25px; border-bottom:10px solid #f7f7f7;}
+.recipeViewWrap .titleArea h2 {font-size:15px; margin-bottom:5px;}
+.recipeViewWrap .recipeDetailArea {padding:25px 18px 0;}
+.recipeViewWrap .recipeDetailArea .recipeDetailBox {margin-bottom:30px;}
+.recipeViewWrap .recipeDetailArea .recipeDetailBox h3 {color:#333; font-size:14px; margin-bottom:5px;}
+.recipeViewWrap .recipeDetailArea .recipeDetailBox p {font-weight:300;}
+.recipeViewWrap .recipeDetailArea .recipeDetailBox ol li {font-weight:300; position:relative; padding-left:25px; margin-bottom:10px;}
+.recipeViewWrap .recipeDetailArea .recipeDetailBox ol li .number {position:absolute; top:2px; left:0; display:block; width:18px; height:18px; font-size:10px; text-align:center; color:#fff; background:#ffae2f; border-radius:9px; font-weight:300;}
+.recipeViewWrap .recipeImgArea {margin-bottom:40px;}
+.recipeViewWrap .recipeImgArea img {max-height:300px; width:auto; max-width:100%;}
+
+/* 나의 플레이리스트 */
+.myPlayListWrap .mainTitleArea {padding:0 18px; overflow:hidden; margin-bottom:20px; position:relative;}
+.myPlayListWrap .mainTitleArea .titleArea {float:left; line-height:32px;}
+.myPlayListWrap .mainTitleArea .titleArea.type02 {line-height:1.5;}
+.myPlayListWrap .mainTitleArea .titleArea h2 {float:left; font-size:15px; margin-right:6px;}
+.myPlayListWrap .mainTitleArea .titleArea .count {float:left; background:#ffae2f; margin-top:8px; height:18px; line-height:18px; border-radius:10px; padding:0 8px; color:#fff; vertical-align:middle; font-size:10px;}
+.myPlayListWrap .mainTitleArea .btnArea {float:right;}
+.myPlayListWrap .mainTitleArea .btnArea button {width:35px; height:35px; border-radius:4px; overflow:hidden; text-indent:-9999px; margin-left:3px;}
+.myPlayListWrap .mainTitleArea .btnArea .typeMusic {background:#eaeaea url('../images/common/icon_music.png') no-repeat center center; background-size:15px;} 
+.myPlayListWrap .mainTitleArea .btnArea .typeMovie {background:#eaeaea url('../images/common/icon_avi.png') no-repeat center center; background-size:15px;}
+.myPlayListWrap .mainTitleArea .btnArea .typeMusic.on {background:#2fb7af url('../images/common/icon_music_on.png') no-repeat center center; background-size:15px;} 
+.myPlayListWrap .mainTitleArea .btnArea .typeMovie.on {background:#2fb7af url('../images/common/icon_avi_on.png') no-repeat center center; background-size:15px;}
+.myPlayListWrap .mainTitleArea .btnBookmark {position:absolute; top:2px; right:18px; width:20px; height:20px; background:url('../images/common/btn_bookmark_off.png') no-repeat; background-size:20px; text-indent:-9999px;}
+.myPlayListWrap .mainTitleArea .btnBookmark.on {background:url('../images/common/btn_bookmark_on.png') no-repeat; background-size:20px;}
+.myPlayListWrap .mainTitleArea .hashTagArea {margin:5px 0;}
+.myPlayListWrap .settingBtnArea {padding:0 18px; overflow:hidden; margin-bottom:10px;}
+.myPlayListWrap .settingBtnArea .btnBox {float:right;}
+.myPlayListWrap .settingBtnArea button {float:left; height:28px; line-height:26px; border-radius:20px; padding:0 12px; text-align:center; border:1px solid #eaeaea; font-size:11px; color:#5a5a5a;}
+.myPlayListWrap .settingBtnArea .btnBox button {margin-left:5px; }
+
+.playListArea {overflow:hidden;}
+.playListArea .playListCount {background:#f7f7f7; height:45px; color:#959595; font-weight:300; padding:0 18px; line-height:45px;}
+.playListArea .playListCount .count {display:inline-block; background:#ffae2f; height:15px; line-height:13px; border-radius:10px; padding:0 8px; color:#fff; margin-left:5px; font-size:10px;}
+.playListArea .playListCount input[type="checkbox"] {margin-right:18px;}
+.playListArea .playListCount strong {margin-right:10px; font-weight:300; color:#5a5a5a;}
+.playListArea .playListCount .typeTit {float:right; text-align:center; width:54px; color:#5a5a5a;}
+.playListArea .playListCount .changeNum {float:right; overflow:hidden; width:80px; color:#5a5a5a;}
+.playListArea .playListCount .changeNum .title {float:left; width:40px; text-align:center;}
+.playListArea table {margin:0 18px; width:calc(100% - 36px);}
+.playListArea table td {height:70px; border-bottom:1px solid #eaeaea; text-align:center;}
+.playListArea table td .titleTxt {display:block; font-size:15px; margin-bottom:3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+.playListArea table td img {width:18px;}
+.playListArea table tr.checked .titleTxt {color:#2fb7af;}
+.playListArea table td.title,
+.playListArea table td.checkboxCell {text-align:left; padding-left:0;}
+.playListArea table td .btnBookmark {width:20px; height:20px; background:url('../images/common/btn_bookmark_off.png') no-repeat; background-size:20px; text-indent:-9999px;}
+.playListArea table td .btnBookmark.on {background:url('../images/common/btn_bookmark_on.png') no-repeat; background-size:20px;}
+
+.playListArea.type02 .title {padding-left:18px;}
+.playListArea.type02 .last td {border-bottom:0;}
+
+/* 뮤직 플레이어 */
+.musicPlayerArea {width:250px; height:250px; margin:30px auto 30px; position:relative;}
+.musicPlayerArea .playerArea {width:250px; height:250px; border:6px solid #eaeaea; border-radius:120px;}
+.musicPlayerArea .noticeTxtArea {position:absolute; top:27px; left:27px; width:195px; height:195px; overflow:hidden; background:#000; box-shadow:0px 0px 4px rgba(0,0,0,0.1); border-radius:50%; text-align:center; padding-top:70px;}
+.musicPlayerArea .noticeTxtArea .timerTxt {display:block; font-size:34px;  color:#fff; position:relative; z-index:3;}
+.musicPlayerArea .noticeTxtArea img {position:absolute; top:0; left:0; height:100%; z-index:1; opacity:0.3;}
+
+.musicPlayerBtnArea {height:50px; margin-bottom:30px; text-align:center; padding:0 18px;}
+.musicPlayerBtnArea .btnRepetition {float:left; width:20px; height:20px; background:url('../images/common/btn_repetition.png') no-repeat; background-size:20px; text-indent:-9999px; margin-top:15px;}
+.musicPlayerBtnArea .btnRepetition.on {background:url('../images/common/btn_repetition_on.png') no-repeat; background-size:20px;}
+.musicPlayerBtnArea .btnRandom {float:right; width:20px; height:20px; background:url('../images/common/btn_random.png') no-repeat; background-size:20px; text-indent:-9999px; margin-top:15px;}
+.musicPlayerBtnArea .btnRandom.on {background:url('../images/common/btn_random_on.png') no-repeat; background-size:20px;}
+.musicPlayerBtnArea .btnPlay {width:50px; height:50px; border-radius:50%; overflow:hidden; text-indent:-9999px; background:url('../images/common/btn_play.png') no-repeat; background-size:50px; vertical-align:middle; margin:0 5px;}
+.musicPlayerBtnArea .btnPlay.stop {background:url('../images/common/btn_stop.png') no-repeat; background-size:50px;}
+.musicPlayerBtnArea .btnPrev, 
+.musicPlayerBtnArea .btnNext {width:50px; height:50px; vertical-align:middle;}
+.musicPlayerBtnArea:after  {content:''; display:block; clear: both;}
+
+/* 명상 호흡하기 */
+.breathContWrap, 
+.breathContWrap #header {background:#2fb7af;}
+.breathContWrap .breathWrap .breathTimerArea .noticeTxtArea {box-shadow:none; top:0; padding-top:50%; margin-top:-90px;}
+
+.breathWrap {display:table-cell; table-layout:fixed; vertical-align:middle; width:100vw; height:calc(100vh - 125px); position:relative;}
+.breathWrap .breathTimerArea {width:90vw; height:90vw; margin:0 auto; position:relative;}
+.breathWrap .breathTimerArea .noticeTxtArea {position:absolute; top:0; left:13%; width:74%; height:74%; border-radius:50%; text-align:center; font-size:18px; box-shadow:0px 0px 8px rgba(0,0,0,0.1);}
+.breathWrap .breathTimerArea .noticeTxtAreaBg {position:absolute; top:-60px; left:0; width:100%; height:100%; border-radius:50%; background:url('../images/common/bg_timer.png') no-repeat center center; background-size:100%;}
+.breathWrap .breathTimerArea .noticeTxtArea.type02 {padding-top:90px;}
+.breathWrap .breathTimerArea .noticeTxtArea .noticeTxt {display:block; padding-top:50%; margin-top:-27px;}
+.breathWrap .breathTimerArea .noticeTxtArea .noticeTxtType02 {display:block; font-size:20px;}
+.breathWrap .breathTimerArea .noticeTxtArea .timerTxt {display:block; color:#959595;}
+.breathWrap .breathTimerArea .noticeTxtArea .timerTxt.type02 {font-size:40px; color:#333}
+.breathWrap .minuteSelectArea {text-align:center; margin:-50px 0 60px;}
+.breathWrap .minuteSelectArea button {width:58px; height:58px; background:#f7f7f7; color:#5a5a5a; font-size:14px; text-align:center; border-radius:50%; margin:0 5px;}
+.breathWrap .minuteSelectArea button.on {background:#ffae2f; color:#fff; box-shadow:0px 0px 4px rgba(0,0,0,0.1);}
+.breathWrap .btnBreathStart02 {position:absolute; bottom:0px; left:0; width:100%; height:40px; line-height:40px; margin:7px 0 20px; color:#fff; background:#2fb7af; text-align:center; border-radius:20px; font-size:15px; margin-bottom:20px;}
+.breathWrap .btnBreathStart {position:absolute; bottom:30px; left:0; width:100%; height:40px; line-height:40px; color:#fff; text-align:center; font-size:15px;}
+.breathWrap .btnBreathStop {position:absolute; bottom:30px; left:0; width:100%; height:40px; line-height:40px; color:#fff; text-align:center; font-size:15px;}
+.breathWrap.meditation .noticeTxtArea {padding-top:92px;}
+.noticeTxtAreaBg {background:#fff;}
+
+@-webkit-keyframes breathTimerArea {
+  0% {
+    transform:scale(.8);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+
+
+/* 요일 선택 */
+.daySelectArea {overflow:hidden; text-align:center;}
+.daySelectArea.type02 {text-align:left; margin-top:10px;}
+.daySelectArea.type03 {text-align:left; margin-bottom:10px;}
+.daySelectArea button {width:11vw; height:11vw; background:#f7f7f7; color:#5a5a5a; font-size:14px; text-align:center; border-radius:50%; margin-right:1vw;}
+.daySelectArea button:last-child {margin-right:0;}
+.daySelectArea button.on {background:#ffae2f; color:#fff;}
+.daySelectArea button.end:after {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; z-index:5; background:url('../images/common/bg_dayselect_end.png') no-repeat; background-size:100%; color:#fff; border-radius:50%;}
+.daySelectArea button.ing {background:#ffae2f; color:#fff;}
+
+/* 시간/날짜 선택 */
+.timeSettingArea {position:relative; width:100%; height:240px; overflow:hidden; text-align:center; vertical-align:middle; padding-left:calc(((100% - 210px) / 2) + 70px);}
+.timeSettingArea:before {content:""; position:absolute; top:-10px; left:0; z-index:2; width:100%; height:30px; background:url('../images/common/bg_white_dim_top.png') repeat-x; background-size:auto 30px;}
+.timeSettingArea:after {content:""; position:absolute; bottom:15px; left:0; z-index:2; width:100%; height:30px; background:url('../images/common/bg_white_dim_bottom.png') repeat-x; background-size:auto 30px;}
+.timeSettingArea .timePart01 {position:absolute; top:-15px; left:calc((100% - 210px) / 2); width:70px;}
+.timeSettingArea .timePart02 {position:absolute; top:-15px; left:calc(((100% - 210px) / 2) + 70px); width:70px;}
+.timeSettingArea .timePart03 {position:absolute; top:-15px; left:calc(((100% - 210px) / 2) + 140px); width:70px;}
+.timeSettingArea .datePart01 {position:absolute; top:-15px; left:calc((100% - 210px) / 2); width:70px;}
+.timeSettingArea .datePart02 {position:absolute; top:-15px; left:calc(((100% - 210px) / 2) + 70px); width:70px;}
+.timeSettingArea .datePart03 {position:absolute; top:-15px; left:calc(((100% - 210px) / 2) + 140px); width:70px;}
+.timeSettingArea ul li {width:100%; height:40px !important; line-height:40px; font-size:18px; color:#cccccc;}
+.timeSettingArea ul li.swiper-slide-active {font-weight:600; font-size:23px; color:#5a5a5a}
+.timeSettingArea .selectBox {position:absolute; top:80px; left:0; width:100%; height:40px;}
+
+/* 명상시간 알림 리스트 */
+.meditationListWrap .meditationList li {padding:20px 18px; border:1px solid #eaeaea; margin-bottom:18px; border-radius:4px;}
+.meditationListWrap .meditationList li .titleArea {overflow:hidden;}
+.meditationListWrap .meditationList li .titleArea .title {float:left; color:#959595;}
+.meditationListWrap .meditationList li .titleArea .btnToggle {float:right;}
+.meditationListWrap .meditationList li .titleArea .planTxt {font-size:15px;}
+.meditationListWrap .meditationList li .titleArea .planTxt .number {font-size:24px;}
+.meditationListWrap .meditationList li .timeTxt {display:block; font-size:15px; color:#959595; margin-bottom:5px;}
+.meditationListWrap .meditationList li .timeTxt .time {font-size:24px;}
+.meditationListWrap .meditationList li .daySelectArea button {width:10vw; height:10vw; margin-right:0.3vw; color:#959595; position:relative;}
+.meditationListWrap .meditationList li .daySelectArea button.on {background:#f7f7f7; color:#5a5a5a; color:#959595;}
+.meditationListWrap .meditationList li .daySelectArea.type02 button {width:13vw; height:13vw; margin-right:6px; margin-bottom:6px;}
+.meditationListWrap .meditationList li .daySelectArea.type02 button:nth-child(5n) {margin-right:0;}
+.meditationListWrap .meditationList li.on .titleArea .title {color:#767676;}
+.meditationListWrap .meditationList li.on .timeTxt {color:#333333;}
+.meditationListWrap .meditationList li.on .daySelectArea button.on {background:#ffae2f; color:#fff;}
+.meditationListWrap .meditationList li.on .btnToggle {background:url('../images/common/btn_toggle_on.png') no-repeat; background-size:40px;}
+.meditationListWrap .btnAlarmAdd {width:100%; height:40px; line-height:40px; margin:7px 0 20px; color:#fff; background:#2fb7af; text-align:center; border-radius:20px; font-size:15px; margin-bottom:20px;}
+
+/* 명상시간 알림 설정 */
+.meditationSettingWrap {overflow:hidden; padding-bottom:80px;}
+.meditationSettingWrap.type01 {padding-bottom:0;}
+.meditationSettingWrap .timeSettingArea {border-bottom:10px solid #f7f7f7; margin-bottom:30px;}
+.meditationSettingWrap .inputArea {padding:0 18px;}
+.meditationSettingWrap .inputArea .daySelectArea {margin-top:10px;}
+.meditationSettingWrap .btnAlarmAdd {width:calc(100% - 36px); height:40px; line-height:40px; margin:7px 18px 20px; color:#fff; background:#2fb7af; text-align:center; border-radius:20px; font-size:15px;  margin-bottom:20px;}
+.meditationSettingWrap .btnAlarmAdd.type02 {position:absolute; bottom:20px; left:18px; margin:0;}
+.meditationSettingWrap .btnTimerDel {width:calc(100% - 36px); height:40px; line-height:40px; color:#fff; background:#cccccc; text-align:center; border-radius:20px; font-size:15px; margin-bottom:20px;}
+
+.meditationSettingWrap .meditationSettingArea {margin-bottom:30px;}
+.meditationSettingWrap .meditationSettingArea h2 {font-size:15px; margin-bottom:15px;}
+.meditationSettingWrap .meditationSettingArea .daySelectArea button {width:15vw; height:15vw; margin-right:6px; margin-bottom:6px; position:relative; overflow:hidden;}
+.meditationSettingWrap .meditationSettingArea .daySelectArea button:nth-child(5n) {margin-right:0;}
+.meditationSettingWrap .meditationSettingArea .btnSetting {width:98%; height:40px; color:#2fb7af; line-height:40px; margin:10px 1% 0; border-radius:20px;}
+
+.meditationSettingWrap .btnArea {position:absolute; bottom:20px; left:0; width:100%; padding:0 18px;}
+.meditationSettingWrap .btnArea button {float:left; width:49%; margin:0;}
+.meditationSettingWrap .btnArea .btnTimerDel {margin-right:2%;}
+
+.meditationSettingWrap .dayTimeSettingArea {border-bottom:10px solid #f7f7f7; padding-bottom:15px; margin-bottom:30px;}
+.meditationSettingWrap .dayTimeSettingArea .noticeTxt {padding:0 18px; font-size:15px; margin-bottom:5px; font-weight:300;}
+.meditationSettingWrap .dayTimeSettingArea .detailTxt {display:block; padding:0 18px; font-size:10px; color:#959595; margin-bottom:5px; font-weight:300; text-align:right;}
+.meditationSettingWrap .dayTimeSettingArea .selectBoxArea {overflow:hidden;}
+.meditationSettingWrap .dayTimeSettingArea .selectBoxArea .selectBoxCustomArea {float:left; width:48%;}
+.meditationSettingWrap .dayTimeSettingArea .selectBoxArea .selectBoxCustomArea:first-child {margin-right:4%;}
+.meditationSettingWrap .btnSettingEnd {position:absolute; bottom:20px; left:18px; width:calc(100% - 36px); height:40px; line-height:40px; color:#fff; background:#2fb7af; text-align:center; border-radius:20px; font-size:15px; box-shadow:0px 4px 10px rgba(47,183,175,0.3);}
+
+
+
+/* 시간, 날짜 설정 팝업 */
+.settingLaypopWrap {position:fixed; display:table; top:0; left:0; width:100%; height:100%; z-index:11;}
+.settingLaypopWrap .settingLaypopArea {position:relative; display:table-cell; vertical-align:middle; padding:0 30px; width:100%; z-index:2;}
+.settingLaypopWrap .settingLaypopArea .settingLaypopBox {background:#fff; border-radius:4px; overflow:hidden; box-shadow:0px 0px 4px rgba(0,0,0,0.3);}
+.settingLaypopWrap .settingLaypopArea h2 {padding:20px 15px 15px; font-size:18px;}
+.settingLaypopWrap .settingLaypopArea .btnConfirm {width:100%; height:40px; line-height:40px; color:#fff; background:#2fb7af; text-align:center;}
+.settingLaypopWrap .settingLaypopArea .settingLaypopBox .timeSettingArea {height:200px; margin-bottom:40px;}
+.settingLaypopWrap .settingLaypopArea .settingLaypopBox .timeSettingArea:after {bottom:-10px;}
+.settingLaypopWrap .darkBg {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.2); z-index:1;}
+
+.meditationSettingWrap .meditationSettingArea .btnResetSetting:after {content:''; display:block; clear:both;}
+.meditationSettingWrap .meditationSettingArea .btnResetSetting button {float:left; width:47%; height:40px; color:#333; line-height:40px; border:1px solid #eaeaea; margin:0 4% 0 1%; border-radius:20px;}
+.meditationSettingWrap .meditationSettingArea .btnResetSetting button:last-child {margin:0 1% 0 0;}
