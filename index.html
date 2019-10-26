@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-  <title>자유명상 타이머</title>
-  <link type="text/css" rel="stylesheet" href="../static/css/reset.css">
-  <link type="text/css" rel="stylesheet" href="../static/css/common.css">
-  <link type="text/css" rel="stylesheet" href="../static/css/sub.css">
+  <title>명상 호흡하기</title>
+  <link type="text/css" rel="stylesheet" href="./static/css/reset.css">
+  <link type="text/css" rel="stylesheet" href="./static/css/common.css">
+  <link type="text/css" rel="stylesheet" href="./static/css/sub.css">
 </head>
 <body>
-  <div id="wrap" class="breathContWrap">
-    <div id="header" class="type01">
+  <div id="wrap" class="breathContWrap"> 
+    <div id="header">
       <div class="headerContArea">
-        <button type="button" class="setting"><img src="../static/images/common/icon_back_menu.png" alt="뒤로가기" /></button>
+        <button type="button" class="setting"><img src="./static/images/common/icon_back_menu.png" alt="뒤로가기" /></button>
         <div class="mainTitleArea txtTitle">
-          <h1>자유명상 타이머</h1>          
+          <h1>명상 호흡하기</h1>          
         </div>
       </div>
     </div>
     <div id="content" class="type04">
       <div class="breathWrap">
-        <div class="breathTimerArea">
+        <div class="breathTimerArea start">
           <div class="noticeTxtAreaBg"></div>
           <div class="noticeTxtArea">
-            <span class="timerTxt type02">02 : 45</span>
+            <span class="timerTxt"></span>
+            <span class="noticeTxtType02"></span>
           </div>
-        </div>        
-        <button type="button" class="btnBreathStop">정지</button>
+        </div> 
+        <button type="button" class="btnBreathStop">정지하기</button>
       </div>
     </div>    
   </div>
-  <script src="../static/js/TweenMax.min.js"></script>
-  <script src="../static/js/common.js"></script>
+  <script src="./static/js/TweenMax.min.js"></script>
+  <script src="./static/js/common.js"></script>
   <script>
     var Utils = (function(){
 
@@ -117,7 +118,7 @@
       })
     }
 
-    createTimer(60) 
+    createTimer(60, ['숨을 들이 마셔요.', '숨을 내쉬어요.']) 
 
   </script>
 </body>
