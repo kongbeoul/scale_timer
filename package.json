@@ -1,0 +1,23 @@
+{
+  "name": "scale_timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongbeoul/scale_timer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongbeoul/scale_timer/issues"
+  },
+  "homepage": "https://kongbeoul.github.io/scale_timer",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
