@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <title>자유명상 타이머</title>
+  <link type="text/css" rel="stylesheet" href="../static/css/reset.css">
+  <link type="text/css" rel="stylesheet" href="../static/css/common.css">
+  <link type="text/css" rel="stylesheet" href="../static/css/sub.css">
+</head>
+<body>
+  <div id="wrap" class="breathContWrap">
+    <div id="header" class="type01">
+      <div class="headerContArea">
+        <button type="button" class="setting"><img src="../static/images/common/icon_back_menu.png" alt="뒤로가기" /></button>
+        <div class="mainTitleArea txtTitle">
+          <h1>자유명상 타이머</h1>          
+        </div>
+      </div>
+    </div>
+    <div id="content" class="type04">
+      <div class="breathWrap">
+        <div class="breathTimerArea">
+          <div class="noticeTxtAreaBg"></div>
+          <div class="noticeTxtArea">
+            <span class="timerTxt type02">02 : 45</span>
+          </div>
+        </div>        
+        <button type="button" class="btnBreathStop">정지</button>
+      </div>
+    </div>    
+  </div>
+  <script src="../static/js/TweenMax.min.js"></script>
+  <script src="../static/js/common.js"></script>
+  <script>
+    var Utils = (function(){
+
+      function secondsFormatChange(seconds) {
+
+        var minute = parseInt(Math.round(seconds) / 60, 10);
+        var second = parseInt(Math.round(seconds) % 60);
+        
+        if(second < 10) {
+          second = "0" + second;
+        }
+
+        return minute + ":" + second
+      }
+
+      return {
+        secondsFormatChange: secondsFormatChange
+      }
+    })()
+
+    /*
+     * @param totalTime { Number }
+     * @param texts { Array }
+     * 
+     * type 1 (숨 고르기) ['숨을 들이 마셔요.', '숨을 내쉬어요.'] 
+     * type 2, 3 (집중하기, 휴식하기) ['숨을 들이 마셔요.', '기다리세요', '숨을 내쉬어요.', '기다리세요']
+     *
+     * @comaand createTimer(totalTime, texts)
+     */
+
+    function createTimer(totalTime, texts) {
+      var val = 0, _val = 0, startTime = 0, timeCount = 0;
+
+      if(texts) {
+        var repeatCount = (totalTime / 5) / texts.length;
+        var textValues = [];
+        for(var i = 0; i < repeatCount; i++) {
+          textValues = textValues.concat(texts);
+        }
+        document.querySelector(".noticeTxtType02").textContent = textValues[0]; 
+      }
+      
+
+      function handleTweenValue(){
+        timeCount += 1 / 60;
+        var runtime = startTime + timeCount;
+        var mok = parseInt(runtime / 5);
+  
+   
+        var nmg = mok % 2;
+        if(nmg === 0) {
+          val = 5 * mok;
+          var percent = (1 - (((runtime - val).toFixed(2) / 5) * 0.2));
+        } else {
+          _val = _val + (2 * (1 / 60));
+          var percent = (1 - ((Math.abs(runtime - _val).toFixed(2) / 5) * 0.2));
+        } 
+        
+        document.querySelector(".timerTxt").textContent = Utils.secondsFormatChange(totalTime - parseInt(runtime));
+        TweenMax.set(document.querySelector(".noticeTxtAreaBg"), { scale: percent, ease: Linear.easeNone })
+        
+        if(texts) {
+          document.querySelector(".noticeTxtType02").textContent = typeof textValues[mok] !== 'undefined' && textValues[mok]
+        }
+        
+        if(parseFloat(runtime.toFixed(2)) >= totalTime) {
+          TweenMax.ticker.removeEventListener("tick", handleTweenValue)
+        }
+
+      }
+      TweenMax.ticker.fps(60);
+      document.querySelector(".timerTxt").textContent = Utils.secondsFormatChange(totalTime);
+      TweenMax.ticker.addEventListener("tick", handleTweenValue);
+
+      var btnTimerStart = document.querySelector(".btnBreathStop");
+      btnTimerStart.addEventListener("click", function(){
+        this.classList.toggle("on");
+        if(this.classList.contains("on")) {
+          TweenMax.ticker.removeEventListener("tick", handleTweenValue);
+        } else {
+          TweenMax.ticker.addEventListener("tick", handleTweenValue);
+        }
+      })
+    }
+
+    createTimer(60) 
+
+  </script>
+</body>
+</html>

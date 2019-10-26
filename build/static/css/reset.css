@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/****************************************************************
+Last Updated : 2018-04-06
+Author       : amy
+Version      : 2.0
+****************************************************************/
+
+/* reset css */
+html, body, ul, ol, dl, li, dt, dd, form, fieldset, legend, p, pre {margin:0; padding:0; outline:0; border:0; background:transparent;}
+h1, h2, h3, h4, h5, h6 {margin:0; font-weight:normal;}
+fieldset, img {border:0; vertical-align:top;}
+table {width:100%; border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+caption, legend {overflow:hidden !important; clip:rect(1px, 1px, 1px, 1px) !important; position:absolute !important; width:1px !important; height:1px !important}
+input, textarea, select {font-size:100%; line-height:normal; font-family:'NotoSans', sans-serif; margin:0; padding:0; vertical-align:middle;}
+ul, ol, dl, li {list-style:none;}
+abbr, acronym {border-bottom: .1em dotted; cursor:help;}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {display:block;}
+a {color:inherit; text-decoration:none}
+button {background:none; outline:0; border:0; margin:0; padding:0; cursor:pointer; font-family:'NotoSans', sans-serif; }
+img {width:100%;}
+pre {white-space:pre-line; font-size:12px; line-height:1.5; font-family:'NotoSans', sans-serif; color:#333333;}
+
+
+/* Mobile Reset */
+*{-webkit-text-size-adjust:none; box-sizing:border-box;}
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="image"], input[type="tel"], input[type="number"], textarea{-webkit-appearance:none; -webkit-border-radius:0}
+select {-webkit-border-radius:0;}
+
+/* rayout css */
+html,body {width:100%; min-height:100%; font-size:12px; line-height:1.5; font-family:'NotoSans', sans-serif; color:#333333;}
+#wrap {position:relative;}
+
+/* Noto Sans */
+
+@font-face {
+  font-family:'NotoSans';
+  font-weight:300;
+  src: local('Noto Sans KR Light'),
+  url('../font/NotoSans-Light.woff2') format('woff2'),
+  url('../font/NotoSans-Light.woff') format('woff'),
+  url('../font/NotoSans-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family:'NotoSans';
+  font-weight:400;
+  src: local('Noto Sans KR Regular'),
+  url('../font/NotoSans-Regular.woff2') format('woff2'),
+  url('../font/NotoSans-Regular.woff') format('woff'),
+  url('../font/NotoSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family:'NotoSans';
+  font-weight:700;
+  src: local('Noto Sans KR Bold'),
+  url('../font/NotoSans-Bold.woff2') format('woff2'),
+  url('../font/NotoSans-Bold.woff') format('woff'),
+  url('../font/NotoSans-Bold.otf') format('opentype');
+}
