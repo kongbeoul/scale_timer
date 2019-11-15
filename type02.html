@@ -64,41 +64,40 @@
      */
 
     function createTimer(totalTime, texts) {
-      var val = 0, _val = 0, startTime = 0, timeCount = 0;
-
+      var val = 0, _val = 0, startTime = 0, timeCount = 0, len = texts.length || 2;
       if(texts) {
-        var repeatCount = (totalTime / 5) / texts.length;
-        var textValues = [];
+        var repeatCount = (totalTime / 5) / len, textValues = [];
         for(var i = 0; i < repeatCount; i++) {
           textValues = textValues.concat(texts);
         }
         document.querySelector(".noticeTxtType02").textContent = textValues[0]; 
       }
-      
-
       function handleTweenValue(){
         timeCount += 1 / 60;
-        var runtime = startTime + timeCount;
-        var mok = parseInt(runtime / 5);
-  
-   
-        var nmg = mok % 2;
-        if(nmg === 0) {
-          val = 5 * mok;
-          var percent = (1 - (((runtime - val).toFixed(2) / 5) * 0.2));
-        } else {
-          _val = _val + (2 * (1 / 60));
-          var percent = (1 - ((Math.abs(runtime - _val).toFixed(2) / 5) * 0.2));
+        var runtime = startTime + timeCount, frame = parseInt(runtime / 5), frameCount = frame % len;
+        if(frameCount === 0) { // 작아질 떄
+          val = 5 * frame;
+        } else { // 커질 때
+          if(len > 2) { // 집중하기, 휴식하기
+            if(frameCount % 2 === 0) {
+              _val = _val + (2 * (1 / 60));
+            } else {
+              _val = _val + (1 * (1 / 60));
+            }
+          } else { // 숨 고르기
+            _val = _val + (2 * (1 / 60));
+          }
         } 
+        var scale = (1 - ((Math.abs(runtime - _val).toFixed(2) / 5) * 0.2));
         
         document.querySelector(".timerTxt").textContent = Utils.secondsFormatChange(totalTime - parseInt(runtime));
-        TweenMax.set(document.querySelector(".noticeTxtAreaBg"), { scale: percent, ease: Linear.easeNone })
+        TweenMax.set(document.querySelector(".noticeTxtAreaBg"), { scale: scale, ease: Linear.easeNone })
         
         if(texts) {
-          document.querySelector(".noticeTxtType02").textContent = typeof textValues[mok] !== 'undefined' && textValues[mok]
+          document.querySelector(".noticeTxtType02").textContent = typeof textValues[frame] !== 'undefined' && textValues[frame]
         }
         
-        if(parseFloat(runtime.toFixed(2)) >= totalTime) {
+        if(parseFloat(runtime.toFixed(2)) > totalTime) {
           TweenMax.ticker.removeEventListener("tick", handleTweenValue)
         }
 
@@ -118,7 +117,7 @@
       })
     }
 
-    createTimer(60, ['숨을 들이 마셔요.', '숨을 내쉬어요.']) 
+    createTimer(30, ['숨을 들이 마셔요.', '기다리세요', '숨을 내쉬어요.', '기다리세요']) 
 
   </script>
 </body>
